@@ -30,7 +30,7 @@ export default function Home() {
           Experimentar Demo
         </Button>
         <Button to="/solucao" variant="outline">
-          Ver a Solução Completa
+          Ver a solução completa
         </Button>
       </CtaBanner>
     </>
