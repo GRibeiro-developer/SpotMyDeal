@@ -2,6 +2,7 @@
 
 Este repositório é a **evolução das Sprints 1 e 2** (HTML + CSS + JS puro) para uma aplicação usando React + vite e tailwind, tipada com TypeScript. — seguindo os requisitos da etapa **Front-End Design Engineering**.
 
+## SUMÁRIO
 
 ## 1- Tecnologias utilizadas
 ## 2- Como rodar projeto
