@@ -1,28 +1,36 @@
 # SpotMyDeal — Sprint 3 · Front-End Design Engineering
 
-> Gamificação de cupons de desconto com **loot tracker**. Projeto acadêmico **FIAP** em parceria conceitual com a **SoulUp** (upcycling & sustentabilidade).
+Este repositório é a **evolução das Sprints 1 e 2** (HTML + CSS + JS puro) para uma aplicação usando React + vite e tailwind, tipada com TypeScript. — seguindo os requisitos da etapa **Front-End Design Engineering**.
 
-Este repositório é a **evolução da Sprint 2** (HTML + CSS + JS puro) para uma **aplicação React moderna**, componentizada, tipada com TypeScript e construída com Vite — conforme os requisitos da etapa **Front-End Design Engineering**.
 
----
+## 1- Tecnologias utilizadas
+## 2- Como rodar projeto
+## 3- Páginas e rotas
+## 4- Arquitetura solicitada em documento do challenge
+## 5- Hooks 
+## 6- Checklist — Critérios de Avaliação
+## 7- O que mudou em relação ao site HTML original
+## 8- Equipe
+## 9- Uso de IA
+--------------------------------------------------------------------------------------------------------------------------
 
-## 🚀 Stack técnica (obrigatória da Sprint)
+## Tecnologias utilizadas
 
 | Tecnologia | Uso |
 |---|---|
-| **React 18** | Interface e componentização |
-| **Vite** | Build e ambiente de desenvolvimento |
+| **React** | Interface e componentização |
+| **Vite** | Construção e ambiente de desenvolvimento |
 | **TypeScript** | Tipagem estática em toda a aplicação |
-| **Tailwind CSS** | Estilização (100% via classes utilitárias, sem CSS externo) |
-| **React Router DOM** | Navegação SPA (rotas estáticas e dinâmicas) |
-| **React Hook Form** | Formulário de contato com validação tipada |
-| **GitHub** | Versionamento (repositório já inicializado com commit inicial) |
+| **Tailwind CSS** | Estilização 100% reaproveitado, sem CSS externo |
+| **React Router DOM** | Navegação solicitada como (SPA) |
+| **React Hook Form** |Usado para validação de formulário|
+| **GitHub** | Versionamento padrão|
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
-## 📦 Como rodar o projeto
+## Como rodar o projeto?
 
-```bash
+
 # 1. Instalar dependências
 npm install
 
@@ -33,23 +41,9 @@ npm run dev
 # 3. Build de produção
 npm run build
 
-# 4. Pré-visualizar o build de produção
-npm run preview
-```
+--------------------------------------------------------------------------------------------------------------------------
 
-## 🔗 Subindo para o GitHub
-
-O projeto já vem com um repositório Git local inicializado e o primeiro commit feito. Para publicar:
-
-```bash
-git remote add origin <URL_DO_SEU_REPOSITORIO>
-git branch -M main
-git push -u origin main
-```
-
----
-
-## 🗺️ Páginas / Rotas
+## Páginas / Rotas
 
 Todas as páginas obrigatórias da Sprint 2 foram migradas e mantidas, agora como uma **SPA** com `react-router-dom`:
 
@@ -65,15 +59,15 @@ Todas as páginas obrigatórias da Sprint 2 foram migradas e mantidas, agora com
 | `/contato` | Contato | Formulário com React Hook Form |
 | `*` | 404 | Página não encontrada |
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
-## 🧠 Arquitetura de componentes
+## Arquitetura solicitada em documento do challenge
 
 ```
 src/
 ├── assets/img/          # imagens dos integrantes (importadas como módulos)
 ├── components/
-│   ├── ui/               # design system: Button, Badge, Card, Container,
+│   ├── ui/               # design do sistema: Button, Badge, Card, Container,
 │   │                     # SectionHeading, PageHero, Pill, GlowDivider,
 │   │                     # StatHighlight, FormInput, FormSelect, FormTextarea
 │   ├── layout/           # Navbar, Footer, Layout (Outlet do React Router)
@@ -93,14 +87,14 @@ src/
 ```
 
 **Princípios seguidos:**
-- Nenhuma página é uma "parede monolítica de JSX" — cada seção visual é um componente próprio, recebendo dados via **props tipadas**.
-- Conteúdo (textos, listas, dados do jogo) fica separado em `src/data/*.ts`, nunca hardcoded dentro do JSX das páginas.
+- Cada seção visual é um componente próprio, recebendo dados via props tipadas.
+- Conteúdo (textos, listas, dados do jogo) fica separado em `src/data/*.ts`.
 - Componentes de formulário (`FormInput`, `FormSelect`, `FormTextarea`) são genéricos e reutilizáveis com qualquer `register()` do React Hook Form.
 - `PageHero`, `Container`, `Button`, `Card` e `SectionHeading` são reaproveitados em praticamente todas as páginas.
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
-## 🪝 Hooks & estado (React)
+## Hooks & estado (React)
 
 | Hook | Onde | O que faz |
 |---|---|---|
@@ -113,7 +107,7 @@ src/
 
 A página **Demo** é o ponto alto da interatividade: todo o estado do "loot tracker" (pontos, inventário, cupons coletados, ranking ao vivo, toast) vive no hook `useDemoGame`, mantendo os componentes de apresentação (`PlayerPanel`, `CouponArenaCard`, `Leaderboard`) livres de lógica — eles só recebem dados e callbacks via props.
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
 ## ✅ Checklist — Critérios de Avaliação (Sprint 3)
 
@@ -123,7 +117,7 @@ A página **Demo** é o ponto alto da interatividade: todo o estado do "loot tra
 - [x] **Bloco 4 — Estilização e responsividade com Tailwind**: 100% Tailwind (sem CSS externo além do `@tailwind` base), responsivo em mobile (≤480px), tablet (768px) e desktop (992px+).
 - [x] **Bloco 5 — Formulários com React Hook Form**: `useForm` tipado com `ContactFormValues`, validações (obrigatório, e-mail, mínimo de caracteres), mensagens de erro, estado de envio.
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
 ## 🔁 O que mudou em relação ao site HTML original
 
@@ -132,11 +126,11 @@ A página **Demo** é o ponto alto da interatividade: todo o estado do "loot tra
 - CSS customizado (`style.css`, `responsive.css`) foi substituído por **Tailwind CSS** utilitário.
 - Todo o conteúdo textual (Sobre, Solução, FAQ, Integrantes) foi **preservado e reaproveitado**, apenas reorganizado em dados tipados (`src/data`).
 
----
+--------------------------------------------------------------------------------------------------------------------------
 
 ## 👥 Equipe
 
-| Nome | RM | Papel |
+| Nome | RM | função |
 |---|---|---|
 | Gabriel Augusto | 573120 | Front-End · UI/UX · Gamificação |
 | Nycolas Escobar | 573052 | Produto & Estratégia |
@@ -144,3 +138,14 @@ A página **Demo** é o ponto alto da interatividade: todo o estado do "loot tra
 | Tayna Jimenes | 569337 | UX Research · Conteúdo |
 
 **Turma:** 1TDSPW · FIAP 2026
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+## Uso de IA
+- Auxílio de escritura do README.MD (nomenclaturas e estruturação de documentação do codigo)
+- Migração do codigo de .HTML para .TSX via extensão (.html to tsx no vscode)
+- transcrição do codigo antigo em .JS para TS (via Claude)
+- auxilio na estruturação do código
+- auxilio na criação dos hooks (via claude)
+- reestruturação de partes do js. (a parte em que eram os cards flutuantes e fotos dos integrantes (VIA CLAUDE) )
