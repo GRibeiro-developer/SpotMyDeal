@@ -4,11 +4,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { getMemberById } from '@/data/members';
 
-/**
- * Página de detalhe do integrante. Demonstra rota dinâmica com parâmetro
- * (`/integrantes/:id`), lido via `useParams`, e navegação programática
- * ("Voltar") via `useNavigate`.
- */
+
 export default function MemberDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
