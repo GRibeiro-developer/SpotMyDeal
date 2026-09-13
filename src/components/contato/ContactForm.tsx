@@ -5,12 +5,7 @@ import FormTextarea from '@/components/ui/FormTextarea';
 import FormSelect from '@/components/ui/FormSelect';
 import { contactSubjects } from '@/data/contato';
 
-/**
- * Formulário de contato tipado com React Hook Form.
- * Regras replicam a validação original (campos obrigatórios, e-mail válido,
- * mensagem com mínimo de 20 caracteres), agora com tipagem estática via
- * `ContactFormValues` e validação declarativa do RHF.
- */
+
 export default function ContactForm() {
   const {
     register,
